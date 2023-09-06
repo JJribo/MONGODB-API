@@ -5,9 +5,11 @@ const teacherRoute = require('./routes/Teacher');
 const bodyParser = require('body-parser')
 const app = express();
 const PORT = 4000;
+const cors = require('cors')
 
 // MIDDLEWARE
 app.use(express.json());
+app.use(cors())
 
 /*app.use((req, res, next) => {
     console.log(req.path, req.method);

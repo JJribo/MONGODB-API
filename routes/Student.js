@@ -89,7 +89,7 @@ router.delete('/deleteMany', async (req, res) => {
             const result = await Task.deleteMany({ firstname: body.firstname });
             res.send(`${result.deletedCount} record(s) deleted`);
         } else {
-            res.send('No matching records found to delete');
+            res.send('No match');
         }
     } catch (error) {
         console.error(error);
